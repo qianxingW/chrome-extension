@@ -1,0 +1,36 @@
+.root-wrapper {
+  position: fixed;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 4px rgba(0, 0, 0, 0.04);
+  width: 300px;
+  box-sizing: border-box;
+  color: #585A5A;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 20px 24px 24px;
+}
+
+.root-header {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.root-header div {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #262626;
+}
+
+.ant-btn {
+  margin-bottom: 14px;
+}
+
+.root-closeWrapper {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  cursor: pointer;
+}

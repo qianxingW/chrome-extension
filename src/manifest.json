@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Rootnet chrome Extension",
+  "description": "Rims工时拉取",
+  "background": { "service_worker": "background.bundle.js" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon-34.png"
+  },
+  "icons": {
+    "128": "icon-34.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*", "<all_urls>"],
+      "js": ["contentScript.bundle.js"],
+      "css": ["content.styles.css"]
+    }
+  ],
+  "devtools_page": "devtools.html",
+  "web_accessible_resources": [
+    {
+      "resources": ["content.styles.css", "icon-128.png", "icon-34.png"],
+      "matches": []
+    }
+  ],
+  "content_security_policy": {
+    "script-src": "'self' 'unsafe-eval'",
+    "object-src": "'self'"
+  },
+  "host_permissions": [
+    "<all_urls>",
+    "*://*/*"
+  ],
+  "permissions": [
+    "activeTab",
+    "declarativeNetRequest",
+    "background",
+    "contextMenus",
+    "cookies",
+    "storage",
+    "tabs",
+    "webRequest",
+    "scripting"
+  ]
+}
